@@ -1,69 +1,19 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  const nav = [["About", "#about"], ["Work", "#work"], ["Experience", "#experience"], ["Stack", "#stack"], ["Contact", "#contact"]];
+  const stack = [["Core", "Flutter", "Dart"], ["Firebase", "Firebase", "Firestore", "Firebase Authentication"], ["State Management", "Provider", "Riverpod", "BLoC", "GetX"], ["Networking", "REST APIs"], ["Local Storage", "SQLite", "Hive", "SharedPreferences"], ["Architecture", "Clean Architecture", "MVVM"], ["Development", "Git", "GitHub", "Postman"]];
+  const process = [["01", "Understand", "Understand the problem, requirements and users."], ["02", "Design", "Turn the idea into a simple and usable interface."], ["03", "Build", "Develop the application with Flutter and Dart."], ["04", "Integrate", "Connect APIs, Firebase and required services."], ["05", "Improve", "Test, refine and continuously improve the product."]];
+  return <main id="top">
+    <header className="shell nav"><a href="#top" className="mark" aria-label="Home">MSJ</a><nav>{nav.map(([name, href]) => <a key={href} href={href}>{name}</a>)}</nav><a href="#contact" className="talk">Let&apos;s talk ↗</a></header>
+    <section className="shell hero"><div className="hero-copy"><h1 className="display reveal d1">Hello</h1><div className="intro reveal d2"><p>I&apos;m Mohammed<br />Samaan Jushiddi.</p><strong>Flutter Developer.</strong><small>Building cross-platform mobile experiences with Flutter and Dart.</small></div></div><div className="hero-image reveal d2"><Image src="/images/profile-suit-transparent.png" alt="Mohammed Samaan Jushiddi in a formal suit" fill priority sizes="(max-width: 720px) 100vw, 60vw" /></div><div className="hero-meta reveal d3"><p>Flutter · Dart</p><a href="#about">Scroll down ↓</a></div></section>
+    <section id="about" className="section"><div className="shell"><p className="eyebrow">02 / About me</p><div className="about-grid"><h2>A developer who likes turning ideas into apps.</h2><div className="about-copy"><p>I&apos;m Mohammed Samaan Jushiddi, a Flutter Developer focused on building practical cross-platform mobile applications. With a CSE background, I&apos;m continually learning and building with Dart and Flutter.</p><span>Flutter · Dart / CSE</span></div></div></div></section>
+    <section id="work" className="section"><div className="shell"><p className="eyebrow">03 / Selected work</p><h2>Selected<br />work.</h2><div className="empty"><strong>Selected work is currently being prepared.</strong><span>Project details, screenshots and links will appear here as the work is ready to share.</span></div></div></section>
+    <section id="experience" className="section"><div className="shell"><p className="eyebrow">04 / Experience</p><h2>Experience</h2><div className="list"><article><b>2026</b><div><h3>OMNIMATE AI</h3><em>CMA — Chief Mobile Architect</em></div><span aria-hidden="true" /></article><article><b>2026</b><div><h3>HADI &amp; TAIMUR</h3><em>AI Marketing &amp; Automation Intern</em><small>01 FEB — 01 MAY</small></div><p>Campaign research, content planning, AI-powered content generation, audience engagement and automation support.</p></article></div></div></section>
+    <section id="stack" className="section"><div className="shell"><p className="eyebrow">05 / Technical direction</p><h2>Flutter stack</h2><div className="stack">{stack.map(([title, ...items]) => <div key={title}><b>{title}</b>{items.map(item => <span key={item}>{item}</span>)}</div>)}</div></div></section>
+    <section className="section"><div className="shell"><p className="eyebrow">06 / Process</p><h2>How I build</h2><div className="list process">{process.map(([number, title, description]) => <article key={number}><b>{number}</b><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>
+    <section className="section"><div className="shell journey"><div><p className="eyebrow">07 / Education</p><h2>Learning,<br />building, growing.</h2></div><div><b>2023 — 2027</b><h3>Anjuman Institute of Technology and Management</h3><p>Computer Science &amp; Engineering</p></div></div></section>
+    <section id="contact" className="contact"><div className="shell"><p>08 / Contact</p><h2>Let&apos;s build<br />something.</h2><div><a href="https://github.com/Mohammedsamaan876" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/mohammed-samaan-jushiddi-072a042b9/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></section>
+    <footer className="shell footer"><div><b>MOHAMMED SAMAAN JUSHIDDI</b><span>Flutter Developer</span></div><span>© 2026</span><div><a href="https://github.com/Mohammedsamaan876" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/mohammed-samaan-jushiddi-072a042b9/" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+  </main>;
 }
