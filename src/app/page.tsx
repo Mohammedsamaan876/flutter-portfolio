@@ -16,7 +16,7 @@ export default function Home() {
             <span>Available for Mobile Projects &amp; Roles</span>
           </div>
 
-          <h1 id="hero-title" className="hero-title">Hello</h1>
+          <h1 id="hero-title" className="hero-title">HELLO</h1>
 
           <p className="hero-name">
             I&apos;m Mohammed <span className="hero-name-highlight">Samaan Jushiddi.</span>
@@ -32,7 +32,7 @@ export default function Home() {
             Building high-performance, polished cross-platform mobile experiences for iOS and Android with Flutter and Dart. Specializing in Clean Architecture, fluid animations, and reliable offline-first systems.
           </p>
 
-          <div className="hero-highlights">
+          <div className="hero-highlights desktop-highlights">
             <div className="highlight-pill">
               <span className="highlight-icon">📱</span>
               <span>iOS &amp; Android Apps</span>
@@ -79,18 +79,35 @@ export default function Home() {
           />
         </div>
 
+        {/* Mobile Highlights: positioned directly after the photo on mobile web */}
+        <div className="hero-highlights mobile-highlights reveal">
+          <div className="highlight-pill">
+            <span className="highlight-icon">📱</span>
+            <span>iOS &amp; Android Apps</span>
+          </div>
+          <div className="highlight-pill">
+            <span className="highlight-icon">⚡</span>
+            <span>Clean Architecture</span>
+          </div>
+          <div className="highlight-pill">
+            <span className="highlight-icon">🔥</span>
+            <span>Firebase &amp; REST APIs</span>
+          </div>
+        </div>
+
         <div className="hero-bottom">
-          <div className="hero-bottom-tech">
-            <span>FLUTTER</span>
-            <span className="dot-sep">·</span>
-            <span>DART</span>
-            <span className="dot-sep">·</span>
+          <div className="hero-bottom-left">
+            <span>FLUTTER · DART</span>
+          </div>
+          <div className="hero-bottom-center">
+            <a href="#about" className="hero-scroll-link">
+              <span>Scroll to explore</span>
+              <b aria-hidden="true">↓</b>
+            </a>
+          </div>
+          <div className="hero-bottom-right">
             <span>MOBILE ARCHITECTURE</span>
           </div>
-          <a href="#about" className="hero-scroll-link">
-            <span>Scroll to explore</span>
-            <b aria-hidden="true">↓</b>
-          </a>
         </div>
       </section>
     <section id="about" className="section"><div className="shell"><div className="section-header"><p className="eyebrow">01 / About</p></div><div className="about-grid"><h2>A developer who likes turning ideas into apps.</h2><div><p className="body-copy">I&apos;m Mohammed Samaan Jushiddi, a Flutter Developer focused on building practical cross-platform mobile applications. With a CSE background, I&apos;m continually learning and building with Dart and Flutter.</p><p className="meta-line">Flutter · Dart / CSE</p></div></div></div></section>
