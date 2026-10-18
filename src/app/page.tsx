@@ -19,13 +19,11 @@ export default function Home() {
           <h1 id="hero-title" className="hero-title">HELLO</h1>
 
           <p className="hero-name">
-            I&apos;m Mohammed <span className="hero-name-highlight">Samaan Jushiddi.</span>
+            I&apos;m Mohammed <span className="hero-name-highlight">Samaan Jushiddi</span>
           </p>
 
           <div className="hero-role-wrapper">
             <span className="hero-role-badge">Flutter Developer</span>
-            <span className="hero-role-dot">·</span>
-            <span className="hero-role-subtitle">Chief Mobile Architect</span>
           </div>
 
           <p className="hero-description">
@@ -95,20 +93,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-bottom">
-          <div className="hero-bottom-left">
-            <span>FLUTTER · DART</span>
-          </div>
-          <div className="hero-bottom-center">
-            <a href="#about" className="hero-scroll-link">
-              <span>Scroll to explore</span>
-              <b aria-hidden="true">↓</b>
-            </a>
-          </div>
-          <div className="hero-bottom-right">
-            <span>MOBILE ARCHITECTURE</span>
-          </div>
-        </div>
+
       </section>
     <section id="about" className="section"><div className="shell"><div className="section-header"><p className="eyebrow">01 / About</p></div><div className="about-grid"><h2>A developer who likes turning ideas into apps.</h2><div><p className="body-copy">I&apos;m Mohammed Samaan Jushiddi, a Flutter Developer focused on building practical cross-platform mobile applications. With a CSE background, I&apos;m continually learning and building with Dart and Flutter.</p><p className="meta-line">Flutter · Dart / CSE</p></div></div></div></section>
     <section id="work" className="section"><div className="shell"><div className="section-header"><p className="eyebrow">02 / Selected work</p><h2>Selected work.</h2><p className="section-intro">A focused selection of work will appear here as each project is ready to share.</p></div><div className="work-note"><strong>Selected work is currently being prepared.</strong><p>Project details, screenshots and links will appear here as the work is ready to share.</p></div></div></section>

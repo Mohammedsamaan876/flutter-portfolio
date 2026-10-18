@@ -41,6 +41,28 @@ body {
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle, organic warm uncoated paper grain texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-image: url("/images/paper-texture.png");
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -159,7 +181,6 @@ button:focus-visible {
   min-height: calc(100svh - 80px);
   display: grid;
   grid-template-columns: minmax(0, 1.22fr) minmax(360px, 0.98fr);
-  grid-template-rows: 1fr auto;
   column-gap: clamp(28px, 3.8vw, 56px);
   padding: 12px 0 24px;
   position: relative;
@@ -434,66 +455,7 @@ button:focus-visible {
   object-position: center bottom;
 }
 
-/* Hero Bottom Bar */
-.hero-bottom {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  border-top: 1px solid var(--grey-border);
-  padding-top: 16px;
-  color: var(--grey);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  width: 100%;
-}
 
-.hero-bottom-left {
-  display: flex;
-  align-items: center;
-  justify-self: start;
-  color: var(--brown-subtle);
-}
-
-.hero-bottom-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-}
-
-.hero-bottom-right {
-  display: flex;
-  align-items: center;
-  justify-self: end;
-  color: var(--brown-subtle);
-}
-
-.hero-scroll-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--brown);
-  font-weight: 700;
-  transition: color 0.2s ease;
-}
-
-.hero-scroll-link b {
-  color: var(--coral);
-  font-size: 1.05rem;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.hero-scroll-link:hover {
-  color: var(--coral);
-}
-
-.hero-scroll-link:hover b {
-  transform: translateY(3px);
-}
 
 /* ==========================================================================
    Content Sections
@@ -702,9 +664,24 @@ button:focus-visible {
    Contact Section
    ========================================================================== */
 .contact {
+  position: relative;
   background: var(--brown);
   color: var(--cream);
   padding: clamp(5.5rem, 9vw, 8.5rem) 0;
+  isolation: isolate;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("/images/paper-texture.png");
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  opacity: 0.035;
+  mix-blend-mode: screen;
+  z-index: -1;
 }
 
 .contact .eyebrow {
@@ -968,33 +945,7 @@ button:focus-visible {
     width: 100%;
     max-width: 440px;
   }
-  .hero-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-    grid-column: 1;
-    order: 4;
-    margin-top: 18px;
-    width: 100%;
-  }
-  .hero-bottom-center {
-    order: -1;
-  }
-  .hero-bottom-left,
-  .hero-bottom-right {
-    display: flex;
-    justify-content: center;
-    font-size: 0.74rem;
-    color: var(--grey);
-    opacity: 0.85;
-  }
-  .hero-scroll-link {
-    justify-content: center;
-    text-align: center;
-  }
+
   .about-grid,
   .journey {
     grid-template-columns: 1fr;
@@ -1053,13 +1004,7 @@ button:focus-visible {
     justify-content: center;
     text-align: center;
   }
-  .hero-bottom {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 12px;
-  }
+
   .stack-grid {
     grid-template-columns: 1fr;
   }
