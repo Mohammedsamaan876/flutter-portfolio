@@ -6,8 +6,93 @@ const process = [["01", "Understand", "Clarify the problem, requirements and use
 const socials = [["GitHub", "https://github.com/Mohammedsamaan876"], ["LinkedIn", "https://www.linkedin.com/in/mohammed-samaan-jushiddi-072a042b9/"]];
 
 export default function Home() {
-  return <main id="top"><SiteHeader />
-    <section className="shell hero" aria-labelledby="hero-title"><div className="hero-copy reveal"><h1 id="hero-title">Hello</h1><p className="hero-name">I&apos;m Mohammed<br />Samaan Jushiddi.</p><p className="hero-role">Flutter Developer</p><p className="hero-description">Building cross-platform mobile experiences with Flutter and Dart.</p></div><div className="hero-portrait reveal delay"><Image src="/images/profile-suit-final.png" alt="Mohammed Samaan Jushiddi in a formal suit" fill priority sizes="(max-width: 760px) 92vw, (max-width: 1100px) 52vw, 620px" /></div><div className="hero-bottom"><span>Flutter · Dart</span><a href="#about">Scroll to explore <b aria-hidden="true">↓</b></a></div></section>
+  return (
+    <main id="top">
+      <SiteHeader />
+      <section className="shell hero" aria-labelledby="hero-title">
+        <div className="hero-copy reveal">
+          <div className="hero-status-pill">
+            <span className="hero-status-dot" aria-hidden="true"></span>
+            <span>Available for Mobile Projects &amp; Roles</span>
+          </div>
+
+          <h1 id="hero-title" className="hero-title">Hello</h1>
+
+          <p className="hero-name">
+            I&apos;m Mohammed <span className="hero-name-highlight">Samaan Jushiddi.</span>
+          </p>
+
+          <div className="hero-role-wrapper">
+            <span className="hero-role-badge">Flutter Developer</span>
+            <span className="hero-role-dot">·</span>
+            <span className="hero-role-subtitle">Chief Mobile Architect</span>
+          </div>
+
+          <p className="hero-description">
+            Building high-performance, polished cross-platform mobile experiences for iOS and Android with Flutter and Dart. Specializing in Clean Architecture, fluid animations, and reliable offline-first systems.
+          </p>
+
+          <div className="hero-highlights">
+            <div className="highlight-pill">
+              <span className="highlight-icon">📱</span>
+              <span>iOS &amp; Android Apps</span>
+            </div>
+            <div className="highlight-pill">
+              <span className="highlight-icon">⚡</span>
+              <span>Clean Architecture</span>
+            </div>
+            <div className="highlight-pill">
+              <span className="highlight-icon">🔥</span>
+              <span>Firebase &amp; REST APIs</span>
+            </div>
+          </div>
+
+          <div className="hero-actions">
+            <a href="#work" className="hero-action-primary">
+              <span>Explore Work</span>
+              <span className="action-arrow" aria-hidden="true">↓</span>
+            </a>
+            <a href="#contact" className="hero-action-secondary">
+              <span>Let&apos;s Talk</span>
+              <span className="action-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://github.com/Mohammedsamaan876"
+              target="_blank"
+              rel="noreferrer"
+              className="hero-social-link"
+              aria-label="GitHub Profile"
+            >
+              <span>GitHub</span>
+              <span className="action-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-portrait reveal delay">
+          <Image
+            src="/images/profile-suit-final.png"
+            alt="Mohammed Samaan Jushiddi in a formal suit"
+            fill
+            priority
+            sizes="(max-width: 760px) 92vw, (max-width: 1100px) 52vw, 620px"
+          />
+        </div>
+
+        <div className="hero-bottom">
+          <div className="hero-bottom-tech">
+            <span>FLUTTER</span>
+            <span className="dot-sep">·</span>
+            <span>DART</span>
+            <span className="dot-sep">·</span>
+            <span>MOBILE ARCHITECTURE</span>
+          </div>
+          <a href="#about" className="hero-scroll-link">
+            <span>Scroll to explore</span>
+            <b aria-hidden="true">↓</b>
+          </a>
+        </div>
+      </section>
     <section id="about" className="section"><div className="shell"><div className="section-header"><p className="eyebrow">01 / About</p></div><div className="about-grid"><h2>A developer who likes turning ideas into apps.</h2><div><p className="body-copy">I&apos;m Mohammed Samaan Jushiddi, a Flutter Developer focused on building practical cross-platform mobile applications. With a CSE background, I&apos;m continually learning and building with Dart and Flutter.</p><p className="meta-line">Flutter · Dart / CSE</p></div></div></div></section>
     <section id="work" className="section"><div className="shell"><div className="section-header"><p className="eyebrow">02 / Selected work</p><h2>Selected work.</h2><p className="section-intro">A focused selection of work will appear here as each project is ready to share.</p></div><div className="work-note"><strong>Selected work is currently being prepared.</strong><p>Project details, screenshots and links will appear here as the work is ready to share.</p></div></div></section>
     <section id="experience" className="section"><div className="shell"><div className="section-header"><p className="eyebrow">03 / Experience</p><h2>Experience</h2><p className="section-intro">Roles shaped by mobile architecture, AI-assisted marketing, and practical delivery.</p></div><div className="timeline"><article><time>2026</time><div><h3>OMNIMATE AI</h3><p>CMA — Chief Mobile Architect</p></div></article><article><time>2026</time><div><h3>HADI &amp; TAIMUR</h3><p>AI Marketing &amp; Automation Intern</p><small>01 February 2026 — 01 May 2026</small></div><p className="timeline-copy">Campaign research, content planning, AI-powered content generation, audience engagement and automation tasks.</p></article></div></div></section>
@@ -16,5 +101,6 @@ export default function Home() {
     <section className="section"><div className="shell journey"><div><p className="eyebrow">06 / Education</p><h2>Learning,<br />building, growing.</h2></div><div><p className="meta-line">2023 — 2027</p><h3>Anjuman Institute of Technology and Management</h3><p>Computer Science &amp; Engineering</p></div></div></section>
     <section id="contact" className="contact"><div className="shell"><div className="section-header"><p className="eyebrow">07 / Contact</p><h2>Let&apos;s build<br />something.</h2><p className="section-intro">Have a mobile product in mind? Let&apos;s start a conversation.</p></div><div className="contact-grid"><a href="mailto:mohammedsamaan21@gmail.com"><span>Email</span>mohammedsamaan21@gmail.com <b>↗</b></a><a href="tel:+919620461876"><span>Phone</span>9620461876 <b>↗</b></a>{socials.map(([label, href]) => <a key={label} href={href} target="_blank" rel="noreferrer"><span>{label}</span>{label} <b>↗</b></a>)}</div></div></section>
     <footer className="shell footer"><div><strong>MOHAMMED SAMAAN JUSHIDDI</strong><span>Flutter Developer</span></div><div><a href="mailto:mohammedsamaan21@gmail.com">Email</a><a href="tel:+919620461876">Phone</a>{socials.map(([label, href]) => <a key={label} href={href} target="_blank" rel="noreferrer">{label}</a>)}</div><span>© 2026</span></footer>
-  </main>;
+  </main>
+  );
 }
